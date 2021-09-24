@@ -9,6 +9,7 @@ services:
       - data:/opt/RavenDB/Server/RavenData/
     environment:
       - RAVEN_ServerUrl=http://0.0.0.0:9600
+      - RAVEN_Logs_Mode=Information
     labels:
       - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
       - traefik.http.routers.ayaz-memster-ravendb.tls=true
