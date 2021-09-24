@@ -9,10 +9,10 @@ services:
     environment:
       - RAVEN_PublicServerUrl=http://localhost:8085
     labels:
-      - traefik.http.routers.ayaz-memster-frontend.rule=Host(`ravendb.okinazuno.me`)
-      - traefik.http.routers.ayaz-memster-frontend.tls=true
-      - traefik.http.routers.ayaz-memster-frontend.tls.certresolver=letsEncrypt
-      - traefik.http.services.ayaz-memster-frontend.loadbalancer.server.port=8085
+      - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
+      - traefik.http.routers.ayaz-memster-ravendb.tls=true
+      - traefik.http.routers.ayaz-memster-ravendb.tls.certresolver=letsEncrypt
+      - traefik.http.services.ayaz-memster-ravendb.loadbalancer.server.port=8085
 
 volumes:
   data:
