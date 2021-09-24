@@ -2,7 +2,7 @@ services:
   ravendb:
     image: ravendb/ravendb
     ports:
-      - 8080:8080
+      - 8080:8085
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
@@ -10,7 +10,7 @@ services:
       - traefik.http.routers.ayaz-memster-frontend.rule=Host(`ravendb.okinazuno.me`)
       - traefik.http.routers.ayaz-memster-frontend.tls=true
       - traefik.http.routers.ayaz-memster-frontend.tls.certresolver=letsEncrypt
-      - traefik.http.services.ayaz-memster-frontend.loadbalancer.server.port=8080
+      - traefik.http.services.ayaz-memster-frontend.loadbalancer.server.port=8085
 
 volumes:
   data:
