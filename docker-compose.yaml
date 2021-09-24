@@ -9,6 +9,9 @@ services:
       - data:/opt/RavenDB/Server/RavenData/
     environment:
       - RAVEN_PublicServerUrl=http://localhost:8085
+      - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
+      - RAVEN_Setup_Mode=None
+      - RAVEN_License_Eula_Accepted=true
     labels:
       - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
       - traefik.http.routers.ayaz-memster-ravendb.tls=true
