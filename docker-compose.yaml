@@ -3,15 +3,10 @@ services:
     container_name: ayaz-memster-ravendb
     image: ravendb/ravendb
     ports:
-      - 9600:9600
+      - 8080:9600
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
-    environment:
-      - RAVEN_ServerUrl=http://localhost:9600
-      - RAVEN_ARGS='--Setup.Mode=None'
-      - RAVEN_Security_UnsecuredAccessAllowed='PrivateNetwork'
-      - RAVEN_Logs_Mode=Information
     # labels:
     #   - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
     #   - traefik.http.routers.ayaz-memster-ravendb.tls=true
