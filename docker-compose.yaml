@@ -9,8 +9,8 @@ services:
       - data:/opt/RavenDB/Server/RavenData/
     labels:
       - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
-      - traefik.http.routers.ayaz-memster-ravendb.tls=true
-      - traefik.http.routers.ayaz-memster-ravendb.tls.certresolver=letsEncrypt
+      # - traefik.http.routers.ayaz-memster-ravendb.tls=true
+      # - traefik.http.routers.ayaz-memster-ravendb.tls.certresolver=letsEncrypt
       - traefik.http.services.ayaz-memster-ravendb.loadbalancer.server.port=9600
 
 volumes:
