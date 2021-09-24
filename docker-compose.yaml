@@ -7,7 +7,7 @@ services:
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
-    environment:
+    # environment:
       # - RAVEN_ServerUrl=http://localhost:9600
       # - RAVEN_ARGS='-BindPort=9600'
       # - RAVEN_Security_UnsecuredAccessAllowed='PrivateNetwork'
