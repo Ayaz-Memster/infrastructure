@@ -20,7 +20,7 @@ services:
 volumes:
   data:
 
-networks:
-  default:
-    external: true
-    name: traefik-network
+# networks:
+#   default:
+#     external: true
+#     name: traefik-network
