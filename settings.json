@@ -1,0 +1,8 @@
+{
+  "License.Eula.Accepted": true,
+  "Setup.Mode": "Unsecured",
+  "Security.UnsecuredAccessAllowed": "PublicNetwork",
+  "ServerUrl": "https://0.0.0.0:8080",
+  "ServerUrl.Tcp": "tcp://0.0.0.0:38888",
+  "Security.Certificate.Path": "/opt/RavenDB/Server/cert.pfx"
+}
