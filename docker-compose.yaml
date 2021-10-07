@@ -7,14 +7,14 @@ services:
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
-    labels:
-      - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
-      - traefik.http.services.ayaz-memster-ravendb.loadbalancer.server.port=9600
+    # labels:
+    #   - traefik.http.routers.ayaz-memster-ravendb.rule=Host(`ravendb.okinazuno.me`)
+    #   - traefik.http.services.ayaz-memster-ravendb.loadbalancer.server.port=9600
 
 volumes:
   data:
 
-networks:
-  default:
-    external: true
-    name: traefik-network
+# networks:
+#   default:
+#     external: true
+#     name: traefik-network
