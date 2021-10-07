@@ -7,7 +7,7 @@ services:
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
-      - ./settings.json:/opt/RavenDB/Server/settings.json
+      # - ./settings.json:/opt/RavenDB/Server/settings.json
       - ./cert.pfx:/opt/RavenDB/Server/cert.pfx
 
 volumes:
