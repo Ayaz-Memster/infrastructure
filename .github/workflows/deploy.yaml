@@ -26,7 +26,9 @@ jobs:
           username: ${{ secrets.VM_USERNAME }}
           key: ${{ secrets.VM_SSH_PRIVATE_KEY }}
           script: |
-            docker login ghcr.io --username ${{github.actor}} --password ${{secrets.GITHUB_TOKEN}}
+            docker login ghcr.io --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }}
             cd /docker/ayaz-memster-infrastructure
+            echo '${{ secrets.RAVEN_CERT64 }}' > cert.base64
+            base64 --decode ./cert.base64 > cert.pfx
             docker-compose up -d
             docker image prune -a -f
