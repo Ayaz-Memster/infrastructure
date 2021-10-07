@@ -3,8 +3,7 @@ services:
     container_name: ayaz-memster-ravendb
     image: ravendb/ravendb
     ports:
-      - 9601:8080
-      - 9600:9600
+      - 9600:8080
       - 38888:38888
     volumes:
       - data:/opt/RavenDB/Server/RavenData/
