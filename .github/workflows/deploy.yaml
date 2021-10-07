@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.VM_SSH_PRIVATE_KEY }}
           target: '/docker/ayaz-memster-infrastructure/'
           overwrite: true
-          source: 'docker-compose.yaml'
+          source: 'docker-compose.yaml,settings.json'
       - name: Docker Compose Up
         uses: appleboy/ssh-action@master
         with:
